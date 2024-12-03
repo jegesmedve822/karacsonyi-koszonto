@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karácsonyi köszöntő</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="icon" href="./images/christmas-tree.png" type="image/x-icon"
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>🎄 Karácsonyi Ajándék 🎄</h1>
+        <p>Boldog Karácsonyt kívánok Máté, sörrel és illatgyával!</p>
+    </header>
+
+    <!-- Sörkalkulátor -->
+    <section id="beer-calculator">
+        <h2>🍺 Karácsonyi Sörkalkulátor</h2>
+        <form id="calculator-form">
+            <label for="temperature">Hőmérséklet (°C):</label>
+            <input type="number" id="temperature" name="temperature" required>
+            
+            <label for="tasks">Még hány karácsonyi feladatod van?</label>
+            <input type="number" id="tasks" name="tasks" required>
+            
+            <label>Gyertyák száma:</label>
+            <div>
+                <input type="radio" id="candles-0" name="candles" value="0" checked>
+                <label for="candles-0">0</label>
+                <input type="radio" id="candles-1" name="candles" value="1">
+                <label for="candles-1">1</label>
+                <input type="radio" id="candles-4" name="candles" value="4">
+                <label for="candles-4">4</label>
+            </div>
+
+            <button type="button" id="calculate-btn">Számold ki!</button>
+        </form>
+        <div id="beer-result"></div>
+    </section>
+
+    <!-- Gyertyás cucc -->
+    <section id="interactive-candle">
+        <h2>🕯️ Kattintásra gyulladó gyertya</h2>
+        <div id="candle-container">
+            <img id="candle" src="./images/candle.png" alt="Gyertya">
+            <img id="flame" src="./images/flame.png" alt="Láng" style="display: none;">
+        </div>
+        <p id="scent">Illat: <span id="random-scent">Fenyőfa</span></p>
+    </section>
+
+    <!-- Köszöntő felolvasó -->
+    <section id="greeting-generator">
+        <h2>🎁 Karácsonyi Köszöntő</h2>
+        <button id="generate-greeting-btn">Generálj köszöntőt!</button>
+        <div id="greeting-output"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Készítette: © Bartha Dávid 🎅 Boldog Karácsonyt!</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
