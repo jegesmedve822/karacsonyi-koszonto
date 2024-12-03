@@ -58,16 +58,8 @@ document.getElementById("generate-greeting-btn").addEventListener("click", funct
     const synth = window.speechSynthesis;
     const utterance = new SpeechSynthesisUtterance(randomGreeting);
 
-
-    const voices = synth.getVoices();
-    const spanishVoice = voices.find(voice => voice.name === 'Google español' && voice.lang === 'es-ES');
-
-    if (spanishVoice) {
-        utterance.voice = spanishVoice;
-        utterance.lang = 'es-ES'; // SPanyol akcentus
-        synth.speak(utterance);
-    } else {
-        console.warn('A "Google español" hang nem található.');
-    }
+    utterance.lang = 'es-ES';
+    synth.speak(utterance);
+    
 });
 
