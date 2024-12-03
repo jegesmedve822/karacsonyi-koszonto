@@ -58,7 +58,7 @@ document.getElementById("generate-greeting-btn").addEventListener("click", funct
     const synth = window.speechSynthesis;
     const utterance = new SpeechSynthesisUtterance(randomGreeting);
 
-    utterance.lang = 'es-ES';
+    utterance.lang = 'hu-HU';
     synth.speak(utterance);
     
 });
